@@ -4,4 +4,8 @@ seaborn
 catboost
 xgboost
 flask
-# -e .
+scikit-learn
+dill
+xgboost
+catboost
+-e .
