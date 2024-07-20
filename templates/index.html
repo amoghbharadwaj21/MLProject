@@ -1,48 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Performance</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
     <!-- Navigation Button -->
-    <a href="/predictdata" class="btn btn-primary position-fixed top-0 end-0 m-3">Go to Prediction Page</a>
-
+    <div class="bg-primary text-white text-center py-3 fixed-bottom w-100 fs-5 fw-bold cursor-pointer" role="button"
+        onclick="location.href='/predictdata';">
+        Go to Prediction Page
+    </div>
     <div class="container mt-5">
-        <h1 class="display-4 mb-4">Student Performance Prediction</h1>
+        <h1 class="display-4 mb-4 text-center">Students Performance Analysis And Prediction</h1>
 
         <!-- Problem Statement Section -->
         <section class="mb-4">
-            <div class="bg-primary text-white p-3">
-                <h2 class="h4 mb-0">1) Problem Statement</h2>
+            <div class="p-3 bg-dark text-white">
+                <h2 class="h4 mb-0">Problem Statement</h2>
             </div>
             <div class="p-3 border">
-                <p>The goal of this project is to analyze and understand how various factors influence students' test performance. Specifically, the focus is on the following aspects:</p>
+                <p>The goal of this project is to analyze and understand how various factors influence students' test
+                    performance. Specifically, the focus is on the following aspects:</p>
                 <ul>
-                    <li><strong>Performance Analysis</strong>: Evaluating how test scores vary with respect to different influencing variables.</li>
+                    <li><strong>Performance Analysis</strong>: Evaluating how test scores vary with respect to different
+                        influencing variables.</li>
                     <li><strong>Influencing Variables</strong>:
                         <ul>
-                            <li><strong>Gender</strong>: The gender of the students and its potential impact on test scores.</li>
-                            <li><strong>Ethnicity</strong>: The ethnic background of students and its correlation with their performance.</li>
-                            <li><strong>Parental Level of Education</strong>: How the highest level of education attained by the student's parents affects their test scores.</li>
-                            <li><strong>Lunch</strong>: The type of lunch students receive (standard vs. free/reduced) and its effect on performance.</li>
-                            <li><strong>Test Preparation Course</strong>: Whether students completed a test preparation course and how this impacts their test scores.</li>
+                            <li><strong>Gender</strong>: The gender of the students and its potential impact on test
+                                scores.</li>
+                            <li><strong>Ethnicity</strong>: The ethnic background of students and its correlation with
+                                their performance.</li>
+                            <li><strong>Parental Level of Education</strong>: How the highest level of education
+                                attained by the student's parents affects their test scores.</li>
+                            <li><strong>Lunch</strong>: The type of lunch students receive (standard vs. free/reduced)
+                                and its effect on performance.</li>
+                            <li><strong>Test Preparation Course</strong>: Whether students completed a test preparation
+                                course and how this impacts their test scores.</li>
                         </ul>
                     </li>
                 </ul>
-                <p>By analyzing these variables, the project aims to uncover patterns and relationships that could provide insights into educational outcomes and help in formulating strategies to improve student performance.</p>
+                <p>By analyzing these variables, the project aims to uncover patterns and relationships that could
+                    provide insights into educational outcomes and help in formulating strategies to improve student
+                    performance.</p>
             </div>
         </section>
 
         <!-- Data Collection Section -->
         <section>
-            <div class="bg-primary text-white p-3">
-                <h2 class="h4 mb-0">2) Data Collection</h2>
+            <div class="bg-dark text-white p-3">
+                <h2 class="h4 mb-0">Data Description</h2>
             </div>
-            <div class="p-3 border">
-                <p><strong>Dataset Source</strong>: The data is obtained from Kaggle and can be accessed at <a href="https://www.kaggle.com/datasets/spscientist/students-performance-in-exams?datasetId=74977" target="_blank" class="btn btn-link">this link</a>.</p>
+            <div class="p-3 border mb-5">
+                <p><strong>Dataset Source</strong>: The data is obtained from Kaggle and can be accessed at <a
+                        href="https://www.kaggle.com/datasets/spscientist/students-performance-in-exams?datasetId=74977"
+                        target="_blank">here</a>.</p>
                 <p><strong>Dataset Overview</strong>:</p>
                 <ul>
                     <li><strong>Columns</strong>:
@@ -62,42 +77,84 @@
                                     <li><code>Group E</code>: Represents a specific ethnic group (Group E).</li>
                                 </ul>
                             </li>
-                            <li><strong>Parental Level of Education</strong>: The highest level of education achieved by the student's parents.
+                            <li><strong>Parental Level of Education</strong>: The highest level of education achieved by
+                                the student's parents.
                                 <ul>
-                                    <li><code>Bachelor's Degree</code>: The parent has obtained a bachelor's degree.</li>
-                                    <li><code>Some College</code>: The parent has attended some college but did not complete a degree.</li>
+                                    <li><code>Bachelor's Degree</code>: The parent has obtained a bachelor's degree.
+                                    </li>
+                                    <li><code>Some College</code>: The parent has attended some college but did not
+                                        complete a degree.</li>
                                     <li><code>Master's Degree</code>: The parent has obtained a master's degree.</li>
-                                    <li><code>Associate's Degree</code>: The parent has obtained an associate's degree.</li>
+                                    <li><code>Associate's Degree</code>: The parent has obtained an associate's degree.
+                                    </li>
                                     <li><code>High School</code>: The parent has completed high school education.</li>
                                 </ul>
                             </li>
                             <li><strong>Lunch</strong>: The type of lunch the student receives before taking the test.
                                 <ul>
                                     <li><code>Standard</code>: The student receives a standard lunch.</li>
-                                    <li><code>Free/Reduced</code>: The student receives a free or reduced-price lunch.</li>
+                                    <li><code>Free/Reduced</code>: The student receives a free or reduced-price lunch.
+                                    </li>
                                 </ul>
                             </li>
-                            <li><strong>Test Preparation Course</strong>: Indicates whether the student completed a test preparation course before taking the test.
+                            <li><strong>Test Preparation Course</strong>: Indicates whether the student completed a test
+                                preparation course before taking the test.
                                 <ul>
                                     <li><code>Completed</code>: The student completed the test preparation course.</li>
-                                    <li><code>None</code>: The student did not complete the test preparation course.</li>
+                                    <li><code>None</code>: The student did not complete the test preparation course.
+                                    </li>
                                 </ul>
                             </li>
-                            <li><strong>Math Score</strong>: The score achieved by the student in the math exam. This score is a numeric value.</li>
-                            <li><strong>Reading Score</strong>: The score achieved by the student in the reading exam. This score is a numeric value.</li>
-                            <li><strong>Writing Score</strong>: The score achieved by the student in the writing exam. This score is a numeric value.</li>
+                            <li><strong>Math Score</strong>: The score achieved by the student in the math exam. This
+                                score is a numeric value.</li>
+                            <li><strong>Reading Score</strong>: The score achieved by the student in the reading exam.
+                                This score is a numeric value.</li>
+                            <li><strong>Writing Score</strong>: The score achieved by the student in the writing exam.
+                                This score is a numeric value.</li>
                         </ul>
                     </li>
-                    <li><strong>Rows</strong>: The dataset contains 1000 rows, each representing an individual student's record with the above attributes.</li>
+                    <li><strong>Rows</strong>: The dataset contains 1000 rows, each representing an individual student's
+                        record with the above attributes.</li>
                 </ul>
-                <p>This detailed breakdown provides a clear understanding of the data columns, which will be essential for analyzing how various factors influence students' test performance.</p>
             </div>
         </section>
+
     </div>
+
+    <!-- <footer style="background-color: #c9cdd2; color: #343a40;" class="py-3 mt-auto">
+        <div class="container">
+            <div class="text-center">
+                <strong>Contact</strong>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <a href="https://github.com/your-github-username" class="btn btn-dark" target="_blank">
+                        GitHub <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a href="https://www.linkedin.com/in/your-linkedin-username/" class="btn btn-primary" target="_blank">
+                        LinkedIn <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a href="mailto:your-email@example.com" class="btn btn-info" target="_blank">
+                        Email <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <a href="https://www.instagram.com/your-instagram-username/" class="btn btn-danger" target="_blank">
+                        Instagram <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer> -->
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
