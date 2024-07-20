@@ -8,4 +8,5 @@ scikit-learn
 dill
 xgboost
 catboost
+flask_cors
 -e .
