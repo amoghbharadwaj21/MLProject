@@ -29,3 +29,12 @@ def evaluate_model(X_train, y_train,X_test,y_test, models):
         return report
     except Exception as e:
         raise CustomException(e, sys)
+    
+def load_object(file_path):
+    try:
+        with open(file_path, 'rb') as file:
+            obj = dill.load(file)
+            logging.info("Object loaded successfully")
+            return obj
+    except Exception as e:
+        raise CustomException(e, sys)
